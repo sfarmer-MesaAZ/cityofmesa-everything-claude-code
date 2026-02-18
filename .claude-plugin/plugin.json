@@ -1,13 +1,13 @@
 {
-  "name": "everything-claude-code",
-  "version": "1.4.1",
-  "description": "Complete collection of battle-tested Claude Code configs from an Anthropic hackathon winner - agents, skills, hooks, and rules evolved over 10+ months of intensive daily use",
+  "name": "cityofmesa-everything-claude-code",
+  "version": "1.5.1",
+  "description": "Forked from Complete collection of battle-tested Claude Code configs from an Anthropic hackathon winner - agents, skills, hooks, and rules evolved over 10+ months of intensive daily use",
   "author": {
-    "name": "Affaan Mustafa",
-    "url": "https://x.com/affaanmustafa"
+    "name": "City of Mesa",
+    "url": "https://comdeveloper.visualstudio.com/DefaultCollection/AGENTIC-AI"
   },
-  "homepage": "https://github.com/affaan-m/everything-claude-code",
-  "repository": "https://github.com/affaan-m/everything-claude-code",
+  "homepage": "https://comdeveloper.visualstudio.com/DefaultCollection/AGENTIC-AI",
+  "repository": "https://comdeveloper.visualstudio.com/DefaultCollection/AGENTIC-AI/_git/everything-claude-code",
   "license": "MIT",
   "keywords": [
     "claude-code",
