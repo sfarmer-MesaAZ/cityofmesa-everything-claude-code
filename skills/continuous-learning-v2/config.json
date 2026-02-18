@@ -37,5 +37,24 @@
   "integration": {
     "skill_creator_api": "https://skill-creator.app/api",
     "backward_compatible_v1": true
+  },
+  "sources": {
+    "session_transcripts": {
+      "enabled": true,
+      "path": "docs/ai-sessions/*.md",
+      "parser": "markdown-frontmatter",
+      "extract_patterns": [
+        "Technical Challenges & Solutions",
+        "Learnings for Future",
+        "Decision.*Thinking Process",
+        "Challenge.*Solution",
+        "Learning:"
+      ]
+    }
+  },
+  "instinct_generation": {
+    "min_confidence": 0.7,
+    "require_evidence": true,
+    "auto_import": true
   }
 }

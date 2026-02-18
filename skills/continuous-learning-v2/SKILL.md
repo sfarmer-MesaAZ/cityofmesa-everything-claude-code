@@ -237,6 +237,36 @@ When you use the [Skill Creator GitHub App](https://skill-creator.app), it now g
 
 Instincts from repo analysis have `source: "repo-analysis"` and include the source repository URL.
 
+## Integration with Session Documenter
+
+The `session-documenter` skill (see [session-documenter/SKILL.md](../session-documenter/SKILL.md)) exports session transcripts with thinking processes. This integrates with continuous-learning-v2 through the `sources.session_transcripts` configuration:
+
+```json
+{
+  "sources": {
+    "session_transcripts": {
+      "enabled": true,
+      "path": "docs/ai-sessions/*.md",
+      "parser": "markdown-frontmatter",
+      "extract_patterns": [
+        "Technical Challenges & Solutions",
+        "Learnings for Future",
+        "Decision.*Thinking Process"
+      ]
+    }
+  }
+}
+```
+
+**Workflow:**
+1. Use `/session-export --instincts` to capture session thought processes
+2. Session docs are saved to `docs/ai-sessions/`
+3. continuous-learning-v2 reads these docs and extracts patterns
+4. Patterns become instincts with `source: "session-transcript"`
+5. Future sessions benefit from past decision-making processes
+
+This closes the feedback loop: **thoughts → documentation → instincts → better future thoughts**.
+
 ## Confidence Scoring
 
 Confidence evolves over time:

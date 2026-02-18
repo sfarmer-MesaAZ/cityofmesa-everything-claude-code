@@ -251,6 +251,7 @@ everything-claude-code/
 |   |-- regex-vs-llm-structured-text/ # Decision framework: regex vs LLM for text parsing (NEW)
 |   |-- swift-actor-persistence/     # Thread-safe Swift data persistence with actors (NEW)
 |   |-- swift-protocol-di-testing/   # Protocol-based DI for testable Swift code (NEW)
+|   |-- session-documenter/          # Capture thought processes and export session transcripts (NEW)
 |
 |-- commands/         # Slash commands for quick execution
 |   |-- tdd.md              # /tdd - Test-driven development
@@ -284,6 +285,7 @@ everything-claude-code/
 |   |-- update-docs.md      # /update-docs - Update documentation
 |   |-- update-codemaps.md  # /update-codemaps - Update codemaps
 |   |-- python-review.md    # /python-review - Python code review (NEW)
+|   |-- session-export.md   # /session-export - Export session transcripts (NEW)
 |
 |-- rules/            # Always-follow guidelines (copy to ~/.claude/rules/)
 |   |-- README.md            # Structure overview and installation guide
