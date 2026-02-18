@@ -31,35 +31,45 @@ antigravity .
 
 Or open the directory in your Antigravity IDE.
 
-### Step 2: Verify Skill Discovery
+### Step 2: Restart Antigravity (Important!)
 
-Ask Antigravity:
+**After opening the project for the first time, restart Antigravity:**
+- Skills are loaded on startup, not dynamically
+- Restart triggers scanning of `.agent/skills/` directory
+- This is required for new skills to appear
+
+### Step 3: Verify Commands Available
+
+After restart, check slash command autocomplete. Both should appear:
+- ✅ `/session-documenter` - From the skill in `.agent/skills/`
+- ✅ `/session-export` - From the command in `commands/`
+
+**Verified working!** Type `/session` and both should autocomplete.
+
+### Step 4: Test the Commands
+
+You can invoke the functionality in multiple ways:
+
+**Using slash commands (fastest):**
 ```
-"What skills are available in this project?"
+/session-documenter
+```
+or
+```
+/session-export
 ```
 
-You should see `session-documenter` listed.
-
-### Step 3: Test the Skill
-
-Use one of these prompts:
-
-**Basic test:**
+**Using natural language:**
 ```
 "Use the session-documenter skill to export our conversation"
 ```
 
-**With context:**
+**For ADR format:**
 ```
-"Apply session-documenter to create documentation for this session in docs/ai-sessions/"
-```
-
-**For ADR:**
-```
-"Use session-documenter to create an Architecture Decision Record for the decisions we made"
+"Apply session-documenter to create an Architecture Decision Record"
 ```
 
-### Step 4: Verify Output
+### Step 5: Verify Output
 
 Check that a file was created:
 ```bash
@@ -75,8 +85,11 @@ Open the file and verify it contains:
 
 ## 📋 Testing Checklist
 
-- [ ] Antigravity opens the project
-- [ ] Skill appears in available skills
+- [x] Antigravity opens the project
+- [x] Restart Antigravity to load skills
+- [x] `/session-documenter` appears in slash commands (✅ VERIFIED WORKING)
+- [x] `/session-export` appears in slash commands (✅ VERIFIED WORKING)
+- [ ] Can invoke skill via slash command
 - [ ] Can invoke skill via natural language
 - [ ] Documentation file created in `docs/ai-sessions/`
 - [ ] File contains structured session data
